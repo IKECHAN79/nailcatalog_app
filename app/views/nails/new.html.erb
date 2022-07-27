@@ -1,0 +1,20 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">新規プロトタイプ投稿</h2>
+      <%= form_with model: @nail, url:nails_path, local: true do |f| %>
+      <%= f.collection_select(:design_id, Design.all, :id, :name, {}) %>
+      <%= f.collection_select(:color_id, Color.all, :id, :name, {}) %>
+      <%= f.collection_select(:scene_id, Scene.all, :id, :name, {}) %>
+      <%= f.collection_select(:taste_id, Taste.all, :id, :name, {}) %>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+      <%= f.submit "出品する", class:"sell-btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
