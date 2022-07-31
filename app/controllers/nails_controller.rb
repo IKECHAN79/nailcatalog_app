@@ -16,6 +16,12 @@ class NailsController < ApplicationController
     end
   end
 
+  def show
+    @nail = Nail.find(params[:id])
+  end
+
+
+
   private
   def nail_params
     params.permit(:design_id, :color_id, :scene_id, :taste_id, :image).merge(user_id: current_user.id)
