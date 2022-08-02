@@ -59,3 +59,39 @@ table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
+/* 新規ネイル投稿 */
+
+.weight-bold-text {
+  font-weight: bold;
+  font-size: 1.5em;
+  min-width: 170px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.click-upload {
+  margin: 15px  0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 0px;
+}
+
+
+.sell-btn {
+  display: inline-block;
+  padding: 1em 10em;
+  font-size: 0.8em;
+  color: #fff;
+  background: #87CEFA;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #000 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin-top: 20px;
+}
+.sell-btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
