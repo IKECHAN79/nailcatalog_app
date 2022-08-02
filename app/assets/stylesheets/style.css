@@ -190,9 +190,7 @@ a {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-}
+
 .prototype__hedding{
   font-size: 24px;
   font-weight: bold;
@@ -298,13 +296,22 @@ a {
 
 .footer {
   background-color: #999;
+  width: 100%;
   padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -50px;
+
 }
 .copyright {
   text-align: center;
   color: #fff;
   font-size: 10px;
 }
+
+.push {
+  height: 50px;
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
