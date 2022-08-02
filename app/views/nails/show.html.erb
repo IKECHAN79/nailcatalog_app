@@ -1,6 +1,8 @@
 <div class="main">
 <div class="inner">
 <div class="protype__wrapper">
+
+
 <div class="prototype__image">
         <%= image_tag @nail.image %>
       </div>
@@ -25,8 +27,13 @@
           </tr>
         </tbody>
         </table>
-        
-</div>
+
+<% if current_user == @nail.user%>
+<div class="prototype__manage">
+          <%= link_to "削除する", nail_path(@nail.id), method: :delete, class: :prototype__btn %>
+        </div>
+<% end %>
+
  </div>       
 </div>
 </div>

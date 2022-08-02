@@ -20,6 +20,12 @@ class NailsController < ApplicationController
     @nail = Nail.find(params[:id])
   end
 
+  def destroy
+    @nail = Nail.find(params[:id])
+    @nail.destroy
+    redirect_to root_path
+  end
+
 
 
   private
