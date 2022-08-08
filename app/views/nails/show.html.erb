@@ -1,40 +1,45 @@
+<%# ネイル詳細 %>
 <div class="main">
-<div class="inner">
-<div class="protype__wrapper">
+  <div class="inner">
+    <div class="nail__wrapper">
 
 
-<div class="prototype__image">
+      <div class="nail__image">
         <%= image_tag @nail.image %>
       </div>
 
-<table class="table">
-<tbody>
-          <tr>
-            <th>デザイン</th>
-            <td><%= @nail.design.name %></td>
-          </tr>
-          <tr>
-            <th>カラー</th>
-            <td><%= @nail.color.name %></td>
-          </tr>
-          <tr>
-            <th>シーン</th>
-            <td><%= @nail.scene.name %></td>
-          </tr>
-          <tr>
-            <th>テイスト</th>
-            <td><%= @nail.taste.name %></td>
-          </tr>
-        </tbody>
-        </table>
+      <table class="table">
+      <tbody>
+        <tr>
+        <th>デザイン</th>
+          <td><%= @nail.design.name %></td>
+        </tr>
 
-<% if current_user == @nail.user%>
-<div class="prototype__manage">
-          <%= link_to "削除する", nail_path(@nail.id), method: :delete, class: :prototype__btn %>
-        </div>
-<% end %>
+        <tr>
+        <th>カラー</th>
+          <td><%= @nail.color.name %></td>
+        </tr>
 
- </div>       
+        <tr>
+        <th>シーン</th>
+          <td><%= @nail.scene.name %></td>
+        </tr>
+
+        <tr>
+        <th>テイスト</th>
+          <td><%= @nail.taste.name %></td>
+        </tr>
+      </tbody>
+      </table>
+
+      <% if current_user == @nail.user%>
+      <div class="nail__manage">
+        <%= link_to "削除する", nail_path(@nail.id), method: :delete, class: :delete__btn %>
+      </div>
+      <% end %>
+
+    </div>       
+  </div>
 </div>
-</div>
+
 <div class="push"></div>

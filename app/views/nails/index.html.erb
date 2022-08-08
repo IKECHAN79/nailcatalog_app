@@ -1,34 +1,25 @@
 <%# ネイル一覧 %>
 <div class='main'>
+  <div class="inner">
+   <div class="nail__wrapper">
+    <div class='nail-contents'>
 
-  <div class='item-contents'>
-  <div class="ribbon">
-    <h1>ネイルカタログ</h1>
+    <div class="ribbon">
+      <h1>ネイルカタログ</h1>
+    </div>
+
+    <ul class='nail-lists'>
+    <div class='nail-img-content'>
+      <% @nails.each do |nail| %>
+     <li class='list'>
+      <%= link_to nail_path(nail.id) do %>
+      <%= image_tag nail.image, class: "nail-img" %>
+      <% end %>
+     </li>
+      <% end %> 
+    </div>
+    </ul>
+    </div>
+    </div>
   </div>
-    <ul class='item-lists'>
-
-
-     
-        
-        
-
-<div class='item-img-content'>
-
- <% @nails.each do |nail| %>
- <li class='list'>
- <%= link_to nail_path(nail.id) do %>
- <%= image_tag nail.image, class: "item-img" %>
- <% end %>
- </li>
-<% end %> 
-</div>
-        
-  
-      
-      
-
-  
-      
-</ul>
-</div>
 </div>

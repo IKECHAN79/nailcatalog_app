@@ -1,33 +1,40 @@
+<%# 新規ネイル投稿 %>
 <div class="main">
   <div class="inner">
-    <div class="form__wrapper">
-    <div class="ribbon">
-      <h1>新規ネイル投稿</h1>
-    </div>
+    <div class="nail__wrapper">
+      <div class="ribbon">
+        <h1>新規ネイル投稿</h1>
+      </div>
+
       <%= form_with model: @nail, url:nails_path, local: true do |f| %>
+
       <div class="weight-bold-text">
           ・デザイン 
       </div>
       <%= f.collection_select(:design_id, Design.all, :id, :name, {}) %>
+
       <div class="weight-bold-text">
           ・カラー
       </div>
       <%= f.collection_select(:color_id, Color.all, :id, :name, {}) %>
+
       <div class="weight-bold-text">
           ・シーン
       </div>
       <%= f.collection_select(:scene_id, Scene.all, :id, :name, {}) %>
+
       <div class="weight-bold-text">
           ・テイスト
       </div>
       <%= f.collection_select(:taste_id, Taste.all, :id, :name, {}) %>
+
       <div class="click-upload">
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"nail-image" %>
       </div>
-      <%= f.submit "投稿する", class:"sell-btn" %>
+        <%= f.submit "投稿する", class:"sell-btn" %>
       <% end %>
     </div>
   </div>

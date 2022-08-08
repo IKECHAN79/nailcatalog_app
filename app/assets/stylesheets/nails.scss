@@ -1,3 +1,144 @@
+/* ネイル一覧 */
+
+.main {
+  background-color: #FFFFF0
+}
+
+.nail__wrapper{
+  min-height: calc(100vh - 161px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.nail-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.ribbon {
+display: inline-block;
+justify-content: center;
+position: relative;
+height: 60px;
+line-height: 60px;
+vertical-align: middle;
+text-align: center;
+padding: 7px 0;
+font-size: 18px;
+background: #eb004a;
+color: #fff;
+box-sizing: border-box;
+}
+
+.ribbon h1 {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 1px #fff;
+  border-bottom: dashed 1px #fff;
+  line-height: 46px;
+  }
+  
+  .ribbon:before, .ribbon:after{
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  }
+  
+  .ribbon:before {
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  }
+  
+  .ribbon:after {
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  }
+
+  .nail-lists {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nail-lists>.list {
+    width: 37vh;
+    padding: 1vw;
+    background-color: #FFF;
+  }
+
+.nail-img-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nail-img {
+  width: 33vh;
+  height: 33vh;
+  margin: 20px 10px;
+}
+
+
+
+
+/* 新規ネイル投稿 */
+
+.weight-bold-text {
+  font-weight: bold;
+  font-size: 1.5em;
+  min-width: 170px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.click-upload {
+  margin: 15px  0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 0px;
+}
+
+
+.sell-btn {
+  display: inline-block;
+  padding: 0.7em 3em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+  margin-top: 20px;
+}
+
+.sell-btn:hover{
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+
+
+
+
 body {
   background-color: #FFFFF0;
 }
@@ -5,13 +146,22 @@ body {
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
   position: relative;
-  padding-bottom: 120px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
 }
 
 
 
-.prototype__image{
+
+
+
+
+
+/* ネイル詳細 */
+
+.nail__image{
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
@@ -68,39 +218,24 @@ table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
-/* 新規ネイル投稿 */
-
-.weight-bold-text {
-  font-weight: bold;
-  font-size: 1.5em;
-  min-width: 170px;
-  margin-bottom: 0px;
-  margin-top: 20px;
+.nail__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
-.click-upload {
-  margin: 15px  0;
-  min-width: 250px;
-}
-
-.click-upload>p {
-  margin-bottom: 0px;
-}
-
-
-.sell-btn {
-  display: inline-block;
-  padding: 1em 10em;
-  font-size: 0.8em;
-  color: #fff;
-  background: #87CEFA;
+.delete__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.9em;
+  color: #999;
   text-decoration: none;
   user-select: none;
-  border: 1px #000 solid;
+  border: 2px #999 solid;
   border-radius: 3px;
   transition: 0.4s ease;
-  margin-top: 20px;
+  margin: 0 4px;
 }
-.sell-btn:hover{
+.delete__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #999;
 }
