@@ -29,3 +29,6 @@ belongs_to : color
 belongs_to : scene
 belongs_to : taste
 belongs_to : user
+
+
+[![Image from Gyazo](https://i.gyazo.com/f46a5b76641aaadaf75d02fe6abc2a90.jpg)](https://gyazo.com/f46a5b76641aaadaf75d02fe6abc2a90)
